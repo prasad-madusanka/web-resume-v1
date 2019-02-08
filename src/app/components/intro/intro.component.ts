@@ -40,7 +40,7 @@ export class IntroComponent implements OnInit {
   toolsIDEs: any = []
   operatingSystems: any = []
 
-  round: any = []
+  softSkills: any = []
 
   projects: any = []
 
@@ -353,7 +353,7 @@ export class IntroComponent implements OnInit {
       style: "icon-info"
     }]
 
-    this.round = [
+    this.softSkills = [
       {
         "value": 95,
         "c1": '#808080',

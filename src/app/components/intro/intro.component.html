@@ -27,13 +27,17 @@
             h6. Bootstrap heading
           </p>
           <br>
-          <button type="button" class="btn btn-primary text-transform-none" (mouseenter)="changeDownloadResume()"
-            (mouseleave)="changeDownloadResume()">
-            <i class="material-icons" *ngIf="!flagDR">
-              sentiment_satisfied_alt
-            </i>
-            {{downloadResume}}
-          </button>
+
+          <div class="center-items">
+            <button type="button" class="btn btn-primary text-transform-none" (mouseenter)="changeDownloadResume()"
+              (mouseleave)="changeDownloadResume()">
+              <i class="material-icons" *ngIf="!flagDR">
+                sentiment_satisfied_alt
+              </i>
+              {{downloadResume}}
+            </button>
+          </div>
+
         </div>
 
       </div>
@@ -524,20 +528,29 @@
       <p class="h3 topic-main green">Soft Skills</p>
       <p class="h6 topic-sub text-transform-none">Most requried skills for woking with people</p>
 
-      <div class="soft-skills">
-        <div class="circle-container">
-          <div class="row">
+      <div class="row soft-skills text-center padding-top-2">
 
-            <div class="col-md-4 round-progress-bar text-center" *ngFor="let x of round" style="max-width:10rem;">
-              <circle-progress class="noselect" [percent]=x.value [maxPercent]=x.maxPercent [outerStrokeColor]=x.c1
-                [innerStrokeColor]=x.c2></circle-progress>
-              <h5 class="h5">{{x.title}}</h5>
-            </div>
-
-
-          </div>
+        <div class="col-md-4 text-center" *ngFor="let skill of softSkills">
+          <circle-progress class="noselect" [percent]=skill.value [maxPercent]=skill.maxPercent [outerStrokeColor]=skill.c1
+            [innerStrokeColor]=skill.c2></circle-progress>
+          <h5 class="h5">{{skill.title}}</h5>
         </div>
+
       </div>
+
+      <!-- <div class="circle-container">
+            <div class="row">
+
+              <div class="col-md-4 round-progress-bar text-center" *ngFor="let x of round" style="max-width:10rem;">
+                <circle-progress class="noselect" [percent]=x.value [maxPercent]=x.maxPercent [outerStrokeColor]=x.c1
+                  [innerStrokeColor]=x.c2></circle-progress>
+                <h5 class="h5">{{x.title}}</h5>
+              </div>
+
+
+            </div>
+          </div> -->
+
 
     </div>
 
