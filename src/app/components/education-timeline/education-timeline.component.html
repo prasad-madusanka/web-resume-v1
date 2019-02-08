@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="item">
+
+    <div id="timeline">
+
+      <div>
+
+        <section class="year" *ngFor="let item of data">
+          <h3>{{item.year}}</h3>
+          <section>
+            <ul>
+              <h6 class="title">{{item.university}}</h6>
+              <p>{{item.qualification}}</p>
+
+              <p class="description-1 time-des-pt" *ngIf="item.duration?.length!=0">Duration</p>
+              <p *ngIf="item.duration?.length!=0">{{item.duration}}</p>
+
+              <p class="description-1 time-des-pt" *ngIf="item.achievement?.length!=0">Achievement</p>
+              <p class="description-2" *ngIf="item.achievement?.length!=0">{{item.achievement1}} <b>{{item.gpa}}</b> {{item.achievement2}}</p>
+
+
+
+            </ul>
+          </section>
+        </section>
+
+      </div>
+
+    </div>
+
+  </div>
+</div>

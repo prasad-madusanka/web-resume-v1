@@ -1,7 +1,642 @@
-<div class="row">
+<div class="container padding-bottom-5">
 
-  <div class="col-1">
+  <!-- Intro & About -->
+  <div>
+    <div class="row vertical-container overflow">
+
+      <div class="col-md-4 text-center">
+        <img src="{{src}}" class="face img-fluid" alt="Responsive image">
+      </div>
+
+      <div class="col-md-8">
+
+        <div class="intro-content">
+          <h2 class="title no-margin">Hello</h2>
+          <h2 class="title no-margin name">I Am {{name}}</h2>
+          <h1 class="title no-margin"><span>Web</span> <span>Developer</span></h1>
+          <p class="h6 text-transform-none about-me">h6. Bootstrap heading h6. Bootstrap heading h6. Bootstrap heading
+            h6.
+            Bootstrap heading
+            h6. Bootstrap heading
+            h6. Bootstrap heading
+            h6. Bootstrap heading
+            h6. Bootstrap heading
+            h6. Bootstrap heading
+            h6. Bootstrap heading
+
+            h6. Bootstrap heading
+          </p>
+          <br>
+          <button type="button" class="btn btn-primary text-transform-none" (mouseenter)="changeDownloadResume()"
+            (mouseleave)="changeDownloadResume()">
+            <i class="material-icons" *ngIf="!flagDR">
+              sentiment_satisfied_alt
+            </i>
+            {{downloadResume}}
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="padding-top-8">
+
+      <p class="h3 topic-main green">About Me</p>
+      <p class="h6 topic-sub text-transform-none">These are my personal details</p>
+
+      <div class="row padding-top-1">
+        <div class="col-md-6">
+          <b>Name with Initials : </b>&nbsp; {{nameWithInitials}}
+          <br>
+          <b>Born on : </b>&nbsp;{{bornDate}}<sup>th</sup>&nbsp;{{bornMonthAndYear}}
+          <br>
+          <b>Gender : </b>&nbsp;{{gender}}
+          <br>
+          <b>Marital status : </b>&nbsp;{{maritalStatus}}
+          <br>
+        </div>
+        <div class="col-md-6">
+          <b>Freelance : </b>&nbsp;{{freelance}}
+          <br>
+          <b>Skills : </b>&nbsp;{{skills}}
+          <br>
+          <b>Address : </b>&nbsp; {{homeAddress}}
+          <br>
+          <b>Mobile : </b>&nbsp;{{mobileNumber}}
+          <br>
+        </div>
+      </div>
+
+      <div class="row padding-top-2">
+        <div class="col-md-12 text-center">
+          <a class="links" href="https://www.linkedin.com/in/prasad-madusanka" target="_blank">
+            <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
+              title="Click to view profile">
+              <i class="fa fa-linkedin"></i>
+            </button>
+          </a>
+
+          <a class="links" href="https://bitbucket.org/prasadMadusanka/" target="_blank">
+            <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
+              title="Click to view repository, Send me a mail to get full readable access">
+              <i class="fa fa-bitbucket"></i>
+            </button>
+          </a>
+
+          <a class="links" href="mailto:prasad.mads@gmail.com">
+            <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
+              title="Click to send mail to 'prasad.mads@gmail.com'">
+              <i class="fa fa-google"></i>
+            </button>
+          </a>
+
+          <a class="links" href="mailto:prasad@prasadmadusanka.me">
+            <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
+              title="Click to send mail to 'prasad@prasadmadusanka.me'">
+              <i class="material-icons">
+                email
+              </i>
+            </button>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!--End  Intro & About -->
+
+  <!-- Work Experience -->
+  <div>
+
+    <div class="padding-top-5">
+      <p class="h3 topic-main green">Work Experience</p>
+      <p class="h6 topic-sub text-transform-none">Industrial & Personal Work Experience</p>
+
+      <div class="padding-top-2">
+        <app-work-experience-timeline [data]="industrial"></app-work-experience-timeline>
+      </div>
+
+    </div>
 
   </div>
+  <!-- End Work Experience -->
+
+  <!-- Education qualification -->
+  <div>
+
+    <div class="padding-top-5">
+      <p class="h3 topic-main green">Education</p>
+      <p class="h6 topic-sub text-transform-none">Academic qualifications</p>
+
+      <div class="padding-top-2">
+        <app-education-timeline [data]="education"></app-education-timeline>
+      </div>
+
+
+    </div>
+
+  </div>
+  <!-- End Education qualification -->
+
+  <!-- Technical Skills -->
+  <div>
+
+    <div class="padding-top-5 technical-skills">
+      <p class="h3 topic-main green">Technical Skills</p>
+      <p class="h6 topic-sub text-transform-none">Development, Designing Tools & Operating Systems</p>
+
+
+      <!-- Development Environments -->
+      <div>
+        <h5 class="title text-center icon-info">
+          <i class="fas fa-globe-europe"></i>&nbsp;
+          <span>Environments</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of environments">
+
+                <div class="info info-horizontal">
+                  <!-- <div class="icon" [ngClass]=item.style>
+                        <i class="material-icons">{{item.icon}}</i>
+                      </div> -->
+                  <div class="description">
+                    <h4 class="info-title text-center">{{item.title}}</h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Scripting & Languages -->
+      <div>
+
+        <h5 class="title text-center icon-info">
+          <i class="material-icons mat-vert">code</i>&nbsp;
+          <span>Scripting</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of programmingAndWeb">
+
+                <div class="info info-horizontal">
+
+                  <h4 class="info-title in-tle-top text-center"
+                    *ngIf="item.title=='Java / Java Fx' || item.title=='C#'">
+                    {{item.title}}</h4>
+                  <p class="description" *ngIf="item.title=='Java / Java Fx' || item.title=='C#'">
+                    {{item.content}}
+                  </p>
+
+                  <div class="description" *ngIf="item.title!='Java / Java Fx' && item.title!='C#'">
+                    <h4 class="text-center icon-font-size">
+                      <i class="fab" [ngClass]="item.icon"></i>
+                    </h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <!-- Frameworks -->
+      <div>
+        <h5 class="title text-center icon-info technical-header">
+          <i class="material-icons mat-vert">dashboard</i>&nbsp;
+          <span>Frameworks</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of frameworks">
+
+                <div class="info info-horizontal">
+
+                  <h4 class="info-title in-tle-top text-center" *ngIf="item.title=='Spring Boot'">
+                    {{item.title}}</h4>
+                  <p class="description" *ngIf="item.title=='Spring Boot'">
+                    {{item.content}}
+                  </p>
+
+                  <div class="description" *ngIf="item.title!='Spring Boot'">
+                    <h4 class="text-center icon-font-size">
+                      <i class="fab" [ngClass]="item.icon"></i>
+                    </h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- Databases -->
+      <div>
+        <h5 class="title text-center icon-info technical-header">
+          <i class="fa fa-database"></i>&nbsp;
+          <span>Databases</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of databases">
+
+                <div class="info info-horizontal">
+                  <!-- <div class="icon" [ngClass]=item.style>
+                      <i class="material-icons">{{item.icon}}</i>
+                    </div> -->
+                  <div class="description">
+                    <h4 class="info-title text-center">{{item.title}}</h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- Servers -->
+      <div>
+        <h5 class="title text-center icon-info technical-header">
+          <i class="fa fa-server"></i>&nbsp;
+          <span>Servers</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of servers">
+
+                <div class="info info-horizontal">
+                  <!-- <div class="icon" [ngClass]=item.style>
+                          <i class="material-icons">{{item.icon}}</i>
+                        </div> -->
+                  <div class="description">
+                    <h4 class="info-title text-center">{{item.title}}</h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+      <!-- Cloud Services -->
+      <div>
+        <h5 class="title text-center icon-info">
+          <i class="fas fa-cloud"></i>&nbsp;
+          <span>Cloud Services</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of cservices">
+
+                <div class="info info-horizontal">
+                  <!-- <div class="icon" [ngClass]=item.style>
+                          <i class="material-icons">{{item.icon}}</i>
+                        </div> -->
+                  <div class="description">
+                    <h4 class="info-title text-center">{{item.title}}</h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Packages -->
+      <div>
+        <h5 class="title text-center icon-info technical-header">
+          <i class="material-icons mat-vert">local_library</i>&nbsp;
+          <span>Packages</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of packages">
+
+                <div class="info info-horizontal">
+
+                  <h4 class="info-title in-tle-top text-center" *ngIf="item.title=='Maven' || item.title=='Gradle'">
+                    {{item.title}}</h4>
+                  <p class="description" *ngIf="item.title=='Maven' || item.title=='Gradle'">
+                    {{item.content}}
+                  </p>
+
+                  <div class="description" *ngIf="item.title!='Maven' && item.title!='Gradle'">
+                    <h4 class="text-center icon-font-size">
+                      <i class="fab" [ngClass]="item.icon"></i>
+                    </h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- Tools & IDE's -->
+      <div>
+        <h5 class="title text-center icon-info">
+          <i class="fas fa-cloud"></i>&nbsp;
+          <span>Tools & IDE's</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of toolsIDEs">
+
+                <div class="info info-horizontal">
+                  <!-- <div class="icon" [ngClass]=item.style>
+                          <i class="material-icons">{{item.icon}}</i>
+                        </div> -->
+                  <div class="description">
+                    <h4 class="info-title text-center">{{item.title}}</h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+      <!-- Operating Systems -->
+      <div>
+        <h5 class="title text-center icon-info">
+          <i class="fas fa-cloud"></i>&nbsp;
+          <span>Operating Systems</span>
+        </h5>
+
+        <div class="com-e">
+
+          <div class="e-body">
+
+            <div class="row programming">
+
+              <div class="col-md-4 ml-auto" *ngFor="let item of operatingSystems">
+
+                <div class="info info-horizontal">
+                  <!-- <div class="icon" [ngClass]=item.style>
+                                <i class="material-icons">{{item.icon}}</i>
+                              </div> -->
+                  <div class="description">
+                    <h4 class="info-title text-center">{{item.title}}</h4>
+                    <p class="description">
+                      {{item.content}}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+    </div>
+
+  </div>
+  <!-- End Technical Skills -->
+
+  <!-- Soft Skills -->
+  <div>
+
+    <div class="padding-top-5">
+      <p class="h3 topic-main green">Soft Skills</p>
+      <p class="h6 topic-sub text-transform-none">Most requried skills for woking with people</p>
+
+      <div class="soft-skills">
+        <div class="circle-container">
+          <div class="row">
+
+            <div class="col-md-4 round-progress-bar text-center" *ngFor="let x of round" style="max-width:10rem;">
+              <circle-progress class="noselect" [percent]=x.value [maxPercent]=x.maxPercent [outerStrokeColor]=x.c1
+                [innerStrokeColor]=x.c2></circle-progress>
+              <h5 class="h5">{{x.title}}</h5>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- End Soft Skills -->
+
+  <!-- Projects -->
+  <div>
+
+    <div class="padding-top-5">
+      <p class="h3 topic-main green">Projects</p>
+      <p class="h6 topic-sub text-transform-none">Followings are Freelance projects & Academic Projects - Demo</p>
+
+      <div class="projects">
+
+        <div class="row">
+
+          <div class="col-md-4 ml-auto" *ngFor="let item of projects">
+
+            <div class="info info-horizontal">
+              <div class="description text-center">
+                <a href="{{item.url}}" target="_blank">
+
+                  <div><img src="{{item.icon}}" alt=""></div>
+                  <h4 class="info-title">{{item.title}}</h4>
+                  <p class="description text-black-1">
+                    {{item.description}}
+                  </p>
+                  <!-- <p class="technologies-used text-black-1">
+                          Category - <b>{{item.category}}</b>
+                        </p> -->
+                  <p class="technologies-used text-black-1">
+                    Technologies - <b>{{item.techonologies}}</b>
+                  </p>
+                  <p class="h6 text-transform-none status text-black-1">Status - <b>{{item.status}}</b> |
+                    Category -
+                    <b>{{item.category}}</b></p>
+
+                </a>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+  <!-- End Projects -->
+
+  <!-- Extra Curricular -->
+  <div>
+
+    <div class="padding-top-5">
+      <p class="h3 topic-main green">Extra Curricular</p>
+      <p class="h6 topic-sub text-transform-none">Extra curricular activities during school and degree time</p>
+
+      <div class="extra-curricular">
+        <div class="row">
+
+          <div class="list">
+            <ul>
+              <li *ngFor="let item of extraCurricular">{{item}}</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- End Extra Curricular -->
+
+  <!--  Interests -->
+  <div>
+
+    <div class="padding-top-5">
+      <p class="h3 topic-main green">Interests</p>
+      <p class="h6 topic-sub text-transform-none">Interests other than Computer Science</p>
+
+      <div class="extra-curricular">
+        <div class="row">
+
+          <div class="list">
+            <ul>
+              <li *ngFor="let item of interests">{{item}}</li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <!-- End  Interests -->
 
 </div>

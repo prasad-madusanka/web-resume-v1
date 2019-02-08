@@ -1,0 +1,25 @@
+.footer {
+    height: fit-content;
+    background-color: #24292d;
+    width: 100%;
+}
+
+.footer-text {
+    display: flex;
+    justify-content: center;
+}
+
+.title {
+    color: white;
+}
+
+.code {
+    font-size: 20px;
+    vertical-align: -6px;
+}
+
+.fav {
+    // vertical-align: -5px;
+    vertical-align: top;
+    font-size: 18px !important; //color: #f44336;
+}

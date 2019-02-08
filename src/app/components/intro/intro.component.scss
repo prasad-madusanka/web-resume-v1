@@ -1,3 +1,218 @@
-.col-1 {
+.intro {
+    color: black;
+}
+
+.intro-content {
+    padding-top: 3rem;
+}
+
+.vertical-container {
+    padding-top: 6rem;
+}
+
+.overflow {
+    overflow: auto;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.name {
+    line-height: 30px;
+}
+
+.about-me {
+    margin-top: 20px;
+    max-width: 40rem;
+}
+
+//Download Resume Button
+.btn-primary {
+    color: black;
+    background-color: transparent;
+    border-color: #27b049;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+    box-shadow: 0 2px 2px 0 #27b05724, 0 3px 1px -2px #27b05724, 0 1px 5px 0 #27b05724;
+    width: 13rem;
+}
+
+.btn-primary:hover {
+    color: white;
+    border-color: #27b049;
+    background-color: #27b049;
+    transition: 0.8s;
+    -webkit-transition: 0.8s;
+    box-shadow: 0 2px 2px 0 #27b05724, 0 3px 1px -2px #27b05724, 0 1px 5px 0 #27b05724;
+}
+
+//Download Resume Button End
+.topic-main {
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.topic-sub {
+    line-height: 0;
+    font-size: 13px;
+    white-space: nowrap;
+}
+
+.padding-top-1 {
+    padding-top: 1rem;
+}
+
+.padding-top-2 {
+    padding-top: 2rem;
+}
+
+.padding-top-5 {
+    padding-top: 5rem;
+}
+
+.padding-top-8 {
+    padding-top: 8rem;
+}
+
+.padding-bottom-5{
+    padding-bottom: 5rem;
+}
+
+.green {
+    color: #27b049;
+}
+
+.links {
+    padding: 0rem 1rem 0rem 1rem;
+    .fa {
+        font-size: 18px;
+    }
+}
+
+.technical-skills {
+
+    display: block;
+
+    .programming {
+        padding-top: 0 !important;
+        padding-bottom: 4rem;
+    }
+    .info {
+        padding-top: 1rem;
+    }
+    .mat-vert {
+        vertical-align: text-top;
+    }
+    .technical-header {
+        padding-top: 2rem;
+    }
+    .icon-font-size {
+        i {
+            font-size: 46px;
+        }
+        margin-bottom: 0;
+        margin-top: 0;
+    }
+    .java {
+        padding-top: 20px;
+    }
+    .in-tle-top {
+        margin-top: 6px;
+    }
+}
+
+.soft-skills {
+    display: block;
+
+    .circle-container {
+        margin: 0 auto;
+        max-width: 30rem;
+    }
+
+    .round-progress-bar {
+        list-style-type: none;
+        font-weight: 900;
+        h5 {
+            margin-top: -8px;
+            font-size: 14px;
+        }
+    }
+}
+
+.projects {
     
+    display: block;
+    .projects-header {
+        font-weight: 600;
+        font-size: 29px;
+        color: #27b049;
+    }
+    .projects-sentence {
+        line-height: 0;
+    }
+
+    img {
+        border-radius: 50%;
+        width: 5rem;
+        border: 0px solid transparent;
+        box-shadow: 1px 6px 15px #00000d59;
+    }
+    .technologies-used {
+        margin-top: -6px;
+    }
+    .status {
+        margin-top: -5px;
+    }
+
+    .text-black-1 {
+        color: #27292bcf;
+    }
+}
+
+.extra-curricular {
+
+    display: block;
+    .extra-curricular-header {
+        font-weight: 600;
+        font-size: 29px;
+        color: #27b049;
+    }
+    .extra-curricular-sentence {
+        line-height: 0;
+    }
+
+    .list {
+        padding-top: 1rem;
+        padding-left: 2rem;
+        li {
+            font-size: 14px;
+            font-weight: 400;
+            padding-bottom: 3px;
+        }
+    }
+}
+
+
+.interests {
+
+    display: block;
+    .interests-header {
+        font-weight: 600;
+        font-size: 29px;
+        color: #27b049;
+    }
+    .interests-sentence {
+        line-height: 0;
+    }
+
+    .list {
+        padding-top: 1rem;
+        padding-left: 2rem;
+        li {
+            font-size: 14px;
+            font-weight: 400;
+            padding-bottom: 3px;
+        }
+    }
 }
