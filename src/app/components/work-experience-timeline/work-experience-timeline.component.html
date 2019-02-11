@@ -6,14 +6,16 @@
       <div>
 
         <section class="year" *ngFor="let item of data">
-          <h3>{{item.year}}</h3>
+          <h3 class="year-range">{{item.year}}</h3>
           <section>
             <ul>
               <h6 class="title">{{item.company}}</h6>
-              <p>{{item.role}} {{item.duration}}</p>
+              <p>{{item.role}} <b>{{item.duration}}</b></p>
 
+              
               <p class="description-1 time-des-pt" *ngIf="item.technologies?.length!=0">Technologies</p>
               <p *ngIf="item.technologies?.length!=0">{{item.technologies}}</p>
+
               <p class="description-1 time-des-pt" *ngIf="item.rolesPlayed?.length!=0">Roles</p>
               <p class="description-2" *ngIf="item.rolesPlayed?.length!=0">{{item.rolesPlayed}}</p>
 

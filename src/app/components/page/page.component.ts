@@ -34,7 +34,7 @@ export class PageComponent implements OnInit {
     this.myParams = {
       "particles": {
         "number": {
-          "value": 110,
+          "value": 25,
           "density": {
             "enable": true,
             "value_area": 710.2328774690454
@@ -64,7 +64,7 @@ export class PageComponent implements OnInit {
           }
         },
         "size": {
-          "value": 3,
+          "value": 1.9,
           "random": true,
           "anim": {
             "enable": false,

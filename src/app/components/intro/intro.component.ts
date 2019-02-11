@@ -13,8 +13,13 @@ export class IntroComponent implements OnInit {
 
   src: string = 'assets/img/face/face.jpg'
 
+  setn1: string = ''
+  setn2: string = ''
+  setn3: string = ''
+  blink: string = ''
 
   name: string = 'Prasad Madusanka'
+  selfDescription: string = 'Experienced undergraduate joiner with strong well developed industrial skills and experience in Mobile, Web & Desktop application development including design, developing, delivering & maintenance.'
   nameWithInitials: string = 'W. H. M. Prasad Madusanka Wijepala'
   bornDate: string = '13'
   bornMonthAndYear: string = 'October 1995'
@@ -24,7 +29,12 @@ export class IntroComponent implements OnInit {
   mobileNumber: string = '(+94) 777 578 947'
   emailAddress: string = 'prasad.mads@gmail.com / prasad@prasadmadusanka.me'
   freelance: string = 'Available'
-  skills: string = 'Mobile, Web & Full-stack development'
+  skills: string = 'Web, Mobile & Microservice development'
+
+  linkedin: string = 'https://www.linkedin.com/in/prasad-madusanka'
+  bitbucket: string = 'https://bitbucket.org/prasadMadusanka/'
+  gmail: string = 'mailto:prasad.mads@gmail.com'
+  mail: string = 'mailto:hello@prasadmadusanka.me'
 
   industrial: any = []
   education: any = []
@@ -51,17 +61,64 @@ export class IntroComponent implements OnInit {
 
   ngOnInit() {
     this.initUI()
+
+    var skills = [
+      { 'sk1': "Web", 'sk2': "Designer & Developer" },
+      { 'sk1': "Mobile", 'sk2': "Developer" },
+      { 'sk1': "Full Stack", 'sk2': "Developer" }
+    ]
+
+    this.setn1 = skills[2].sk1
+    this.setn2 = skills[2].sk2
+
+    var flag = true
+    setInterval(() => {
+      this.blink = (flag) ? '_' : ''
+      flag = !flag
+    }, 700)
+
+
+    // this.setn1 = skills[0].sk1
+    // this.setn3 = skills[0].sk2
+    // this.setn2 = ''
+    // this.onModelChange(this.setn3)
+
+
+    // var index = 1
+
+    // setInterval(() => {
+
+    //   this.setn1 = skills[index].sk1
+    //   this.setn3 = skills[index].sk2
+    //   this.setn2 = ''
+    //   this.onModelChange(this.setn3)
+    //   index++
+
+    //   if(index == skills.length)
+    //   index = 0
+    // },4000)
+
+
+
+  }
+
+  onModelChange(word) {
+    var index = 0
+    setInterval(() => {
+      this.setn2 += word.charAt(index)
+      index++
+    }, 100)
   }
 
   initUI() {
     this.industrial = [
       {
-        'year': '2016',
-        'role': 'Worked as a Freelance Developer',
+        'year': '2018',
+        'role': 'Working as a Freelance Developer',
         'company': 'Freelance',
-        'duration': 'from 2016 to 2017 June',
+        'duration': 'from 2018 October',
         'rolesPlayed': '',
-        'technologies': 'Android, Java, C#, Javascript, HTML, CSS, MySQL & SQLite'
+        'technologies': 'Spring boot, Javascript, Angular 6, Node Js, MEAN, HTML, CSS, SCSS, Batch Script & MongoDB'
       },
       {
         'year': '2017',
@@ -72,18 +129,18 @@ export class IntroComponent implements OnInit {
         'technologies': 'Java Fx, Spring boot, Javascript, Angular Js, Angular 4 & 5, Node Js, MEAN, HTML, CSS, SCSS, Shell Script, Batch Script, OrientDB & MongoDB'
       },
       {
-        'year': '2018',
-        'role': 'Working as a Freelance Developer',
+        'year': '2016',
+        'role': 'Worked as a Freelance Developer',
         'company': 'Freelance',
-        'duration': 'from 2018 October',
+        'duration': 'from 2016 to 2017 June',
         'rolesPlayed': '',
-        'technologies': 'Spring boot, Javascript, Angular 6, Node Js, MEAN, HTML, CSS, SCSS, Batch Script & MongoDB'
+        'technologies': 'Android, Java, C#, Javascript, HTML, CSS, MySQL & SQLite'
       }
     ]
 
     this.education = [
       {
-        'year': '2019',
+        'year': 'Present',
         'university': 'National School of Business Management',
         'duration': 'From 2017 to 2019',
         'qualification': 'BSc (Hons.) in Computer Science',
@@ -132,68 +189,63 @@ export class IntroComponent implements OnInit {
     this.programmingAndWeb = [
 
       {
-        icon: "fa-node",
+        icon: "fa-node nodejs",
         title: "Node Js",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Proficient in backend service development with Node Js and Express Js.",
         style: "icon-info"
       }, {
         icon: "java",
-        title: "Java / Java Fx",
-        content: "Tour packages are made to have complete and lovely experiences for you all.",
+        title: "Java",
+        content: "Good knowledge in application and service development with java programming language.",
         style: "icon-warning"
       }, {
-        icon: "fa-js",
+        icon: "fa-js js",
         title: "Javascript & Typescript",
-        content: "We are willingly dedicated to you all to satisfy our clients any time as your requirements.",
+        content: "Experience in web development in Javascript.",
         style: "icon-primary"
       }, {
-        icon: "fa-html5",
+        icon: "fa-html5 html ",
         title: "HTML",
-        content: "We are bound to certify to supply assurance and protectiveness during your traveling time.",
+        content: "Proficient in web front end development with HTML5.",
         style: "icon-success"
       }, {
-        icon: "fa-sass",
+        icon: "fa-sass scss",
         title: "Sass",
-        content: "We are bound to certify to supply assurance and protectiveness during your traveling time.",
+        content: "Good experience in SCSS.",
         style: "icon-success"
       }, {
-        icon: "fa-css3",
+        icon: "fa-css3 css3",
         title: "CSS",
-        content: "We are bound to certify to supply assurance and protectiveness during your traveling time.",
+        content: "Good experience in CSS3.",
         style: "icon-success"
       }, {
-        icon: "fa-whmcs",
+        icon: "fa-whmcs shell",
         title: "Shell & Batch Script",
-        content: "We have accountability on your money that is spending and the time you are. It won’t go in vein.",
+        content: "Good knowledge and experience in Shell scripting and Batch scripting.",
         style: "icon-rose"
       }, {
         icon: "",
         title: "C#",
-        content: "We are bound to certify to supply assurance and protectiveness during your traveling time.",
-        style: "icon-success"
-      }, {
-        icon: "fa-python",
-        title: "Python",
-        content: "We are bound to certify to supply assurance and protectiveness during your traveling time.",
+        content: "Experience in standalone application development with C#.",
         style: "icon-success"
       }
     ]
 
     this.frameworks = [
       {
-        icon: "fab fa-angular",
+        icon: "fab fa-angular angular",
         title: "Angular",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Proficient with Angular and sharp web development experience with Angular 4, 5, & 6 releases.",
         style: "icon-info"
       }, {
-        icon: "fab fa-react",
+        icon: "fab fa-react react",
         title: "React",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Basic knowledge in web development with React framework.",
         style: "icon-info"
       }, {
         icon: "fas fa-leaf",
         title: "Spring Boot",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Good experience in Spring Boot Microservice development.",
         style: "icon-info"
       }
     ]
@@ -202,19 +254,19 @@ export class IntroComponent implements OnInit {
       {
         icon: "fab fa-angular",
         title: "Mongo DB",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Sharp & good experience in MongoDB.",
         style: "icon-info"
       },
       {
         icon: "fab fa-angular",
         title: "Orient DB",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Familiar with Orient DB.",
         style: "icon-info"
       },
       {
         icon: "fab fa-angular",
         title: "SQL",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Have good experience with SQL databases.",
         style: "icon-info"
       }
     ]
@@ -223,40 +275,40 @@ export class IntroComponent implements OnInit {
       {
         icon: "fab fa-angular",
         title: "Apache Tomcat",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Good experience in Apache Tomcat server.",
         style: "icon-info"
       },
       {
         icon: "fab fa-angular",
         title: "PM2",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Well experienced in PM2 server",
         style: "icon-info"
       },
       {
         icon: "fab fa-angular",
         title: "Nginx",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Basic knowledge in Nginx server",
         style: "icon-info"
       }
     ]
 
     this.packages = [
       {
-        icon: "fab fa-npm",
+        icon: "fab fa-npm npm",
         title: "npm",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Have good knowlege & experice in npm packages",
         style: "icon-info"
       },
       {
         icon: "",
         title: "Maven",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Good experience in Maven projects",
         style: "icon-info"
       },
       {
         icon: "",
         title: "Gradle",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Good experience in Gradle projects",
         style: "icon-info"
       }
     ]
@@ -265,19 +317,19 @@ export class IntroComponent implements OnInit {
       {
         icon: "fas fa-globe",
         title: "Web",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Proficient in MEAN Stack development, Static, Dynamic web application with backend services development & familiar with Microservice development",
         style: "icon-info"
       },
       {
         icon: "fab fa-android",
         title: "Android",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Around 1 year experience in Android mobile application development and basic knowledge in cross platform application develoment with Nativescript",
         style: "icon-info"
       },
       {
         icon: "fas fa-desktop",
-        title: "Desktop",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        title: "Standalone",
+        content: "Good expirience in standalone application development with Java Fx & C# WPF and basic knowledge in cross platform application development with Electron",
         style: "icon-info"
       }
     ]
@@ -285,19 +337,19 @@ export class IntroComponent implements OnInit {
     this.cservices = [{
       icon: "",
       title: "AWS",
-      content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+      content: "Good experience in AWS services.",
       style: "icon-info"
     },
     {
       icon: "",
       title: "Google Cloud Platform",
-      content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+      content: "Sharp kowledge & experience in Google Cloud Platform.",
       style: "icon-info"
     },
     {
       icon: "fas fa-desktop",
       title: "Microsoft Azure",
-      content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+      content: "Familiar with Azure services, such as Face API",
       style: "icon-info"
     }]
 
@@ -305,51 +357,51 @@ export class IntroComponent implements OnInit {
       {
         icon: "",
         title: "VS Code",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Proficient with the tool and very famillear in development with VSCode",
         style: "icon-info"
       }, {
         icon: "",
         title: "Jet Brains IDE's",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Have good developement experience with JetBrains IDE's, such as Android Studio, IntelliJ, CLion, PHP Storm & DataGrip",
         style: "icon-info"
       }, {
         icon: "fas fa-desktop",
         title: "Eclipse",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Have good development experience with the Eclipse IDE",
         style: "icon-info"
       }, {
         icon: "fas fa-desktop",
         title: "NetBeans",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Have good development experience with the Apache Netebans IDE",
         style: "icon-info"
       }, {
         icon: "fas fa-desktop",
         title: "MAMP, WAMP & XAMP",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Good experience with MAMP, WAMP & XAMP local server environments",
         style: "icon-info"
       }, {
         icon: "fas fa-desktop",
         title: "Postman & SOAP UI",
-        content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+        content: "Deep knowledge and experience in Postman and experiences SOAP UI",
         style: "icon-info"
       }]
 
     this.operatingSystems = [{
       icon: "",
-      title: "Mac OS",
-      content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+      title: "MacOS",
+      content: "Sharp knowledge and experience in MacOS operating system.",
       style: "icon-info"
     },
     {
       icon: "",
       title: "Linux",
-      content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+      content: "Experience with linux operating system and its command line.",
       style: "icon-info"
     },
     {
       icon: "fas fa-desktop",
       title: "Windows",
-      content: "We are ready to give away our fullest cooperation to come true your dream destiny.",
+      content: "Sharp knowledge and experience in Windows operating system.",
       style: "icon-info"
     }]
 

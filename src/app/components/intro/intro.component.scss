@@ -25,6 +25,12 @@
 .about-me {
     margin-top: 20px;
     max-width: 40rem;
+    font-size: 14px;
+}
+
+.face {
+    border-radius: 50%;
+    border-bottom: 3px solid #1bb143;
 }
 
 //Download Resume Button
@@ -117,26 +123,9 @@
     .in-tle-top {
         margin-top: 6px;
     }
-    .description {
-        text-align: center;
-    }
 }
 
-.soft-skills {
-    // display: block;
-    // .circle-container {
-    //     margin: 0 auto;
-    //     max-width: 30rem;
-    // }
-    // .round-progress-bar {
-    //     list-style-type: none;
-    //     font-weight: 900;
-    //     h5 {
-    //         margin-top: -8px;
-    //         font-size: 14px;
-    //     }
-    // }
-}
+.soft-skills {}
 
 .projects {
     display: block;
@@ -207,8 +196,70 @@
     }
 }
 
+.description-text {
+    text-align: center;
+    color: #000000bd;
+    font-weight: 400;
+}
+
 @media only screen and (max-width: 700px) {
     .center-items {
         text-align: center;
+    }
+}
+
+.nodejs {
+    color: #76b45c;
+}
+
+.js {
+    color: #f8e100;
+}
+
+.html {
+    color: #e74c18;
+}
+
+.scss {
+    color: #ce6499;
+}
+
+.css3 {
+    color: #0075c1;
+}
+
+.shell {
+    color: #310924;
+}
+
+.python {
+    color: #336b9d;
+}
+
+.angular {
+    color: #df0029;
+}
+
+.react {
+    color: #5adafd;
+}
+
+.npm {
+    color: #cd3632
+}
+
+.ml-auto {
+    margin: 0 auto;
+}
+
+.personal-information {
+    b {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    span {
+        font-weight: 500;
+        font-size: 15px;
+        color: #000000c7;
     }
 }

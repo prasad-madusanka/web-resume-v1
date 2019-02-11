@@ -1,11 +1,11 @@
-<div class="container padding-bottom-5">
+<div class="container padding-bottom-5 noselect">
 
   <!-- Intro & About -->
   <div>
     <div class="row vertical-container overflow">
 
       <div class="col-md-4 text-center">
-        <img src="{{src}}" class="face img-fluid" alt="Responsive image">
+        <img src="{{src}}" class="face img-fluid" alt="Responsive image" draggable="false">
       </div>
 
       <div class="col-md-8">
@@ -13,19 +13,8 @@
         <div class="intro-content">
           <h2 class="title no-margin">Hello</h2>
           <h2 class="title no-margin name">I Am {{name}}</h2>
-          <h1 class="title no-margin"><span>Web</span> <span>Developer</span></h1>
-          <p class="h6 text-transform-none about-me">h6. Bootstrap heading h6. Bootstrap heading h6. Bootstrap heading
-            h6.
-            Bootstrap heading
-            h6. Bootstrap heading
-            h6. Bootstrap heading
-            h6. Bootstrap heading
-            h6. Bootstrap heading
-            h6. Bootstrap heading
-            h6. Bootstrap heading
-
-            h6. Bootstrap heading
-          </p>
+          <h1 class="title no-margin typewriter"><span class="text-green">{{setn1}}</span>&nbsp;<span>{{setn2}}</span>{{blink}}</h1>
+          <p class="h6 text-transform-none about-me">{{selfDescription}}</p>
           <br>
 
           <div class="center-items">
@@ -47,55 +36,55 @@
     <div class="padding-top-8">
 
       <p class="h3 topic-main green">About Me</p>
-      <p class="h6 topic-sub text-transform-none">These are my personal details</p>
+      <p class="h6 topic-sub text-transform-none">Following details are my basic information & contact details</p>
 
-      <div class="row padding-top-1">
+      <div class="row padding-top-1 personal-information">
         <div class="col-md-6">
-          <b>Name with Initials : </b>&nbsp; {{nameWithInitials}}
+          <b>Name with Initials : </b>&nbsp;<span>{{nameWithInitials}}</span>
           <br>
-          <b>Born on : </b>&nbsp;{{bornDate}}<sup>th</sup>&nbsp;{{bornMonthAndYear}}
+          <b>Born on : </b>&nbsp;<span>{{bornDate}}<sup>th</sup>&nbsp;{{bornMonthAndYear}}</span>
           <br>
-          <b>Gender : </b>&nbsp;{{gender}}
+          <b>Gender : </b>&nbsp;<span>{{gender}}</span>
           <br>
-          <b>Marital status : </b>&nbsp;{{maritalStatus}}
+          <b>Marital status : </b>&nbsp;<span>{{maritalStatus}}</span>
           <br>
         </div>
         <div class="col-md-6">
-          <b>Freelance : </b>&nbsp;{{freelance}}
+          <b>Freelance : </b>&nbsp;<span>{{freelance}}</span>
           <br>
-          <b>Skills : </b>&nbsp;{{skills}}
+          <b>Skills : </b>&nbsp;<span>{{skills}}</span>
           <br>
-          <b>Address : </b>&nbsp; {{homeAddress}}
+          <b>Address : </b>&nbsp; <span>{{homeAddress}}</span>
           <br>
-          <b>Mobile : </b>&nbsp;{{mobileNumber}}
+          <b>Mobile : </b>&nbsp;<span>{{mobileNumber}}</span>
           <br>
         </div>
       </div>
 
       <div class="row padding-top-2">
         <div class="col-md-12 text-center">
-          <a class="links" href="https://www.linkedin.com/in/prasad-madusanka" target="_blank">
+          <a class="links" href="{{linkedin}}" target="_blank">
             <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
               title="Click to view profile">
               <i class="fa fa-linkedin"></i>
             </button>
           </a>
 
-          <a class="links" href="https://bitbucket.org/prasadMadusanka/" target="_blank">
+          <a class="links" href="{{bitbucket}}" target="_blank">
             <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
-              title="Click to view repository, Send me a mail to get full readable access">
+              title="Note: This is a private repository">
               <i class="fa fa-bitbucket"></i>
             </button>
           </a>
 
-          <a class="links" href="mailto:prasad.mads@gmail.com">
+          <a class="links" href="{{gmail}}">
             <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
               title="Click to send mail to 'prasad.mads@gmail.com'">
               <i class="fa fa-google"></i>
             </button>
           </a>
 
-          <a class="links" href="mailto:prasad@prasadmadusanka.me">
+          <a class="links" href="{{mail}}">
             <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
               title="Click to send mail to 'prasad@prasadmadusanka.me'">
               <i class="material-icons">
@@ -107,6 +96,7 @@
       </div>
 
     </div>
+
   </div>
   <!--End  Intro & About -->
 
@@ -114,8 +104,8 @@
   <div>
 
     <div class="padding-top-5">
-      <p class="h3 topic-main green">Work Experience</p>
-      <p class="h6 topic-sub text-transform-none">Industrial & Personal Work Experience</p>
+      <p class="h3 topic-main green">Career Experience</p>
+      <p class="h6 topic-sub text-transform-none">Following details are my <b>Industrial</b> & <b>Freelance</b> experience summary</p>
 
       <div class="padding-top-2">
         <app-work-experience-timeline [data]="industrial"></app-work-experience-timeline>
@@ -130,8 +120,8 @@
   <div>
 
     <div class="padding-top-5">
-      <p class="h3 topic-main green">Education</p>
-      <p class="h6 topic-sub text-transform-none">Academic qualifications</p>
+      <p class="h3 topic-main green">Academic Qualifications</p>
+      <p class="h6 topic-sub text-transform-none">Following details are my career related academic qualifications</p>
 
       <div class="padding-top-2">
         <app-education-timeline [data]="education"></app-education-timeline>
@@ -172,7 +162,7 @@
                       </div> -->
                   <div class="description">
                     <h4 class="info-title text-center">{{item.title}}</h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -207,17 +197,17 @@
                 <div class="info info-horizontal">
 
                   <h4 class="info-title in-tle-top text-center"
-                    *ngIf="item.title=='Java / Java Fx' || item.title=='C#'">
+                    *ngIf="item.title=='Java' || item.title=='C#'">
                     {{item.title}}</h4>
-                  <p class="description" *ngIf="item.title=='Java / Java Fx' || item.title=='C#'">
+                  <p class="description-text" *ngIf="item.title=='Java' || item.title=='C#'">
                     {{item.content}}
                   </p>
 
-                  <div class="description" *ngIf="item.title!='Java / Java Fx' && item.title!='C#'">
+                  <div class="description" *ngIf="item.title!='Java' && item.title!='C#'">
                     <h4 class="text-center icon-font-size">
                       <i class="fab" [ngClass]="item.icon"></i>
                     </h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -254,7 +244,7 @@
 
                   <h4 class="info-title in-tle-top text-center" *ngIf="item.title=='Spring Boot'">
                     {{item.title}}</h4>
-                  <p class="description" *ngIf="item.title=='Spring Boot'">
+                  <p class="description-text" *ngIf="item.title=='Spring Boot'">
                     {{item.content}}
                   </p>
 
@@ -262,7 +252,7 @@
                     <h4 class="text-center icon-font-size">
                       <i class="fab" [ngClass]="item.icon"></i>
                     </h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -302,7 +292,7 @@
                     </div> -->
                   <div class="description">
                     <h4 class="info-title text-center">{{item.title}}</h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -341,7 +331,7 @@
                         </div> -->
                   <div class="description">
                     <h4 class="info-title text-center">{{item.title}}</h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -379,7 +369,7 @@
                         </div> -->
                   <div class="description">
                     <h4 class="info-title text-center">{{item.title}}</h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -414,7 +404,7 @@
 
                   <h4 class="info-title in-tle-top text-center" *ngIf="item.title=='Maven' || item.title=='Gradle'">
                     {{item.title}}</h4>
-                  <p class="description" *ngIf="item.title=='Maven' || item.title=='Gradle'">
+                  <p class="description-text" *ngIf="item.title=='Maven' || item.title=='Gradle'">
                     {{item.content}}
                   </p>
 
@@ -422,7 +412,7 @@
                     <h4 class="text-center icon-font-size">
                       <i class="fab" [ngClass]="item.icon"></i>
                     </h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -462,7 +452,7 @@
                         </div> -->
                   <div class="description">
                     <h4 class="info-title text-center">{{item.title}}</h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -499,7 +489,7 @@
                               </div> -->
                   <div class="description">
                     <h4 class="info-title text-center">{{item.title}}</h4>
-                    <p class="description">
+                    <p class="description-text">
                       {{item.content}}
                     </p>
                   </div>
@@ -562,7 +552,7 @@
 
     <div class="padding-top-5">
       <p class="h3 topic-main green">Projects</p>
-      <p class="h6 topic-sub text-transform-none">Followings are Freelance projects & Academic Projects - Demo</p>
+      <p class="h6 topic-sub text-transform-none">Followings are Freelance projects & Academic Projects</p>
 
       <div class="projects">
 
