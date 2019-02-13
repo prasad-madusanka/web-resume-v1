@@ -13,18 +13,21 @@
         <div class="intro-content">
           <h2 class="title no-margin">Hello</h2>
           <h2 class="title no-margin name">I Am {{name}}</h2>
-          <h1 class="title no-margin typewriter"><span class="text-green">{{setn1}}</span>&nbsp;<span>{{setn2}}</span>{{blink}}</h1>
-          <p class="h6 text-transform-none about-me">{{selfDescription}}</p>
+          <h1 class="title no-margin typewriter"><span
+              class="text-green">{{setn1}}</span>&nbsp;<span>{{setn2}}</span>{{blink}}</h1>
+          <p class="h6 text-transform-none about-me">{{selfDescription1}}<br>{{selfDescription2}} </p>
           <br>
 
           <div class="center-items">
-            <button type="button" class="btn btn-primary text-transform-none" (mouseenter)="changeDownloadResume()"
-              (mouseleave)="changeDownloadResume()">
-              <i class="material-icons" *ngIf="!flagDR">
-                sentiment_satisfied_alt
-              </i>
-              {{downloadResume}}
-            </button>
+            <a href="{{resume}}" download="">
+              <button type="button" class="btn btn-primary text-transform-none" (mouseenter)="changeDownloadResume()"
+                (mouseleave)="changeDownloadResume()">
+                <i class="material-icons" *ngIf="!flagDR">
+                  sentiment_satisfied_alt
+                </i>
+                {{downloadResume}}
+              </button>
+            </a>
           </div>
 
         </div>
@@ -70,9 +73,10 @@
             </button>
           </a>
 
-          <a class="links" href="{{bitbucket}}" target="_blank">
-            <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
-              title="Note: This is a private repository">
+          <a class="links">
+            <!-- href="{{bitbucket}}" target="_blank" -->
+            <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="modal" data-placement="bottom"
+              title="Note: This is a private repository" data-target="#modalBitbucket">
               <i class="fa fa-bitbucket"></i>
             </button>
           </a>
@@ -83,15 +87,15 @@
               <i class="fa fa-google"></i>
             </button>
           </a>
-
+<!-- 
           <a class="links" href="{{mail}}">
             <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
-              title="Click to send mail to 'prasad@prasadmadusanka.me'">
+              title="Click to send mail to 'hello@prasadmadusanka.me'">
               <i class="material-icons">
                 email
               </i>
             </button>
-          </a>
+          </a> -->
         </div>
       </div>
 
@@ -105,7 +109,8 @@
 
     <div class="padding-top-5">
       <p class="h3 topic-main green">Career Experience</p>
-      <p class="h6 topic-sub text-transform-none">Following details are my <b>Industrial</b> & <b>Freelance</b> experience summary</p>
+      <p class="h6 topic-sub text-transform-none">Following details are my <b>Industrial</b> & <b>Freelance</b>
+        experience summary</p>
 
       <div class="padding-top-2">
         <app-work-experience-timeline [data]="industrial"></app-work-experience-timeline>
@@ -138,7 +143,8 @@
 
     <div class="padding-top-5 technical-skills">
       <p class="h3 topic-main green">Technical Skills</p>
-      <p class="h6 topic-sub text-transform-none">Development, Designing Tools & Operating Systems</p>
+      <p class="h6 topic-sub text-transform-none">Section includes developement environments, languages, frameworks,
+        databases, servers, cloud services, tools & etc</p>
 
 
       <!-- Development Environments -->
@@ -196,8 +202,7 @@
 
                 <div class="info info-horizontal">
 
-                  <h4 class="info-title in-tle-top text-center"
-                    *ngIf="item.title=='Java' || item.title=='C#'">
+                  <h4 class="info-title in-tle-top text-center" *ngIf="item.title=='Java' || item.title=='C#'">
                     {{item.title}}</h4>
                   <p class="description-text" *ngIf="item.title=='Java' || item.title=='C#'">
                     {{item.content}}
@@ -352,7 +357,7 @@
       <div>
         <h5 class="title text-center icon-info">
           <i class="fas fa-cloud"></i>&nbsp;
-          <span>Cloud Services</span>
+          <span>Cloud Services & Other</span>
         </h5>
 
         <div class="com-e">
@@ -516,13 +521,13 @@
 
     <div class="padding-top-5">
       <p class="h3 topic-main green">Soft Skills</p>
-      <p class="h6 topic-sub text-transform-none">Most requried skills for woking with people</p>
+      <p class="h6 topic-sub text-transform-none">Most requried skills for woking with a team & people</p>
 
       <div class="row soft-skills text-center padding-top-2">
 
         <div class="col-md-4 text-center" *ngFor="let skill of softSkills">
-          <circle-progress class="noselect" [percent]=skill.value [maxPercent]=skill.maxPercent [outerStrokeColor]=skill.c1
-            [innerStrokeColor]=skill.c2></circle-progress>
+          <circle-progress class="noselect" [percent]=skill.value [maxPercent]=skill.maxPercent
+            [outerStrokeColor]=skill.c1 [innerStrokeColor]=skill.c2></circle-progress>
           <h5 class="h5">{{skill.title}}</h5>
         </div>
 
@@ -552,7 +557,7 @@
 
     <div class="padding-top-5">
       <p class="h3 topic-main green">Projects</p>
-      <p class="h6 topic-sub text-transform-none">Followings are Freelance projects & Academic Projects</p>
+      <p class="h6 topic-sub text-transform-none">Following projects are some of my freelance & academic Projects</p>
 
       <div class="projects">
 
@@ -562,11 +567,13 @@
 
             <div class="info info-horizontal">
               <div class="description text-center">
-                <a href="{{item.url}}" target="_blank">
+
+                <!-- If URL is NOT Empty -->
+                <a href="{{item.url}}" target="_blank" *ngIf="item.url?.length!=0">
 
                   <div><img src="{{item.icon}}" alt=""></div>
                   <h4 class="info-title">{{item.title}}</h4>
-                  <p class="description text-black-1">
+                  <p class="projects-description text-black-1">
                     {{item.description}}
                   </p>
                   <!-- <p class="technologies-used text-black-1">
@@ -580,6 +587,28 @@
                     <b>{{item.category}}</b></p>
 
                 </a>
+
+                <!-- If URL IS Empty -->
+                <a *ngIf="item.url?.length==0">
+
+                  <div><img src="{{item.icon}}" alt=""></div>
+                  <h4 class="info-title">{{item.title}}</h4>
+                  <p class="projects-description text-black-1">
+                    {{item.description}}
+                  </p>
+                  <!-- <p class="technologies-used text-black-1">
+                            Category - <b>{{item.category}}</b>
+                          </p> -->
+                  <p class="technologies-used text-black-1">
+                    Technologies - <b>{{item.techonologies}}</b>
+                  </p>
+                  <p class="h6 text-transform-none status text-black-1">Status - <b>{{item.status}}</b> |
+                    Category -
+                    <b>{{item.category}}</b></p>
+
+                </a>
+
+
               </div>
             </div>
 
@@ -599,7 +628,7 @@
 
     <div class="padding-top-5">
       <p class="h3 topic-main green">Extra Curricular</p>
-      <p class="h6 topic-sub text-transform-none">Extra curricular activities during school and degree time</p>
+      <p class="h6 topic-sub text-transform-none">Extra curricular activities during school & undergraduate period</p>
 
       <div class="extra-curricular">
         <div class="row">
@@ -642,4 +671,33 @@
   </div>
   <!-- End  Interests -->
 
+</div>
+
+<div class="modal fade noselect" id="modalBitbucket" tabindex="-1" role="dialog" aria-labelledby="modalBitbucketLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="modalBitbucketLabel">Hello there</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p class="h6 text-transform-none">This is a private repository and if you need access to view full repository,
+          please send me a email</p>
+        <br>
+        <p class="h6 text-transform-none">Click on email to copy or open your mail client</p>
+        <br>
+        <div class="text-center">
+          <i class="fa fa-google repo-fa"></i> &nbsp;
+          <a class="repo-access" href="{{gmail}}"
+            (click)="copyToClickboard(repoAccessMail)"><span>{{repoAccessMail}}</span></a>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
 </div>

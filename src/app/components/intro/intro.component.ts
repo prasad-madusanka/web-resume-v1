@@ -12,6 +12,7 @@ export class IntroComponent implements OnInit {
   flagDR: boolean = true
 
   src: string = 'assets/img/face/face.jpg'
+  resume: string = "assets/img/resume/Prasad's Resume.pdf"
 
   setn1: string = ''
   setn2: string = ''
@@ -19,7 +20,8 @@ export class IntroComponent implements OnInit {
   blink: string = ''
 
   name: string = 'Prasad Madusanka'
-  selfDescription: string = 'Experienced undergraduate joiner with strong well developed industrial skills and experience in Mobile, Web & Desktop application development including design, developing, delivering & maintenance.'
+  selfDescription1: string = 'I’m a Full Stack Developer with more than 1 year industrial experience and around 2 year experience in freelance development.'
+  selfDescription2: string = 'And I’m an undergraduate joiner with strong and well developed industrial skills and experience in Web development. Also i have freelance experience in Mobile apps & Standalone application development including design, delivering and maintenance.'
   nameWithInitials: string = 'W. H. M. Prasad Madusanka Wijepala'
   bornDate: string = '13'
   bornMonthAndYear: string = 'October 1995'
@@ -34,6 +36,7 @@ export class IntroComponent implements OnInit {
   linkedin: string = 'https://www.linkedin.com/in/prasad-madusanka'
   bitbucket: string = 'https://bitbucket.org/prasadMadusanka/'
   gmail: string = 'mailto:prasad.mads@gmail.com'
+  repoAccessMail: string = 'prasad.mads@gmail.com'
   mail: string = 'mailto:hello@prasadmadusanka.me'
 
   industrial: any = []
@@ -122,7 +125,7 @@ export class IntroComponent implements OnInit {
       },
       {
         'year': '2017',
-        'role': 'Worked as a Junior Software engineer at',
+        'role': 'Worked as a Junior Software engineer',
         'company': 'Virtusa Pvt Ltd',
         'duration': 'from 2017 June to 2018 October',
         'rolesPlayed': 'Roles - Junior Software Engineer & Software Engineer',
@@ -191,17 +194,17 @@ export class IntroComponent implements OnInit {
       {
         icon: "fa-node nodejs",
         title: "Node Js",
-        content: "Proficient in backend service development with Node Js and Express Js.",
+        content: "Proficient in backend service development with Node Js & Express Js.",
         style: "icon-info"
       }, {
         icon: "java",
         title: "Java",
-        content: "Good knowledge in application and service development with java programming language.",
+        content: "Good knowledge in application & service development with Java programming language.",
         style: "icon-warning"
       }, {
         icon: "fa-js js",
         title: "Javascript & Typescript",
-        content: "Experience in web development in Javascript.",
+        content: "Good Experience in web development with Javascript.",
         style: "icon-primary"
       }, {
         icon: "fa-html5 html ",
@@ -221,7 +224,7 @@ export class IntroComponent implements OnInit {
       }, {
         icon: "fa-whmcs shell",
         title: "Shell & Batch Script",
-        content: "Good knowledge and experience in Shell scripting and Batch scripting.",
+        content: "Good knowledge & experience in Shell scripting & Batch scripting.",
         style: "icon-rose"
       }, {
         icon: "",
@@ -235,7 +238,7 @@ export class IntroComponent implements OnInit {
       {
         icon: "fab fa-angular angular",
         title: "Angular",
-        content: "Proficient with Angular and sharp web development experience with Angular 4, 5, & 6 releases.",
+        content: "Proficient with Angular & sharp web development experience with Angular 4, 5, & 6 releases.",
         style: "icon-info"
       }, {
         icon: "fab fa-react react",
@@ -317,19 +320,19 @@ export class IntroComponent implements OnInit {
       {
         icon: "fas fa-globe",
         title: "Web",
-        content: "Proficient in MEAN Stack development, Static, Dynamic web application with backend services development & familiar with Microservice development",
+        content: "Proficient in MEAN Stack development, Static, Dynamic web application with backend services development & familiar with Microservice development.",
         style: "icon-info"
       },
       {
         icon: "fab fa-android",
         title: "Android",
-        content: "Around 1 year experience in Android mobile application development and basic knowledge in cross platform application develoment with Nativescript",
+        content: "Around 1 year experience in Android mobile application development & basic knowledge in cross platform application develoment with Nativescript.",
         style: "icon-info"
       },
       {
         icon: "fas fa-desktop",
         title: "Standalone",
-        content: "Good expirience in standalone application development with Java Fx & C# WPF and basic knowledge in cross platform application development with Electron",
+        content: "Good expirience in standalone application development with Java Fx, C# WPF & basic knowledge in cross platform application development with Electron.",
         style: "icon-info"
       }
     ]
@@ -339,17 +342,30 @@ export class IntroComponent implements OnInit {
       title: "AWS",
       content: "Good experience in AWS services.",
       style: "icon-info"
-    },
-    {
+    }, {
       icon: "",
       title: "Google Cloud Platform",
       content: "Sharp kowledge & experience in Google Cloud Platform.",
       style: "icon-info"
-    },
-    {
-      icon: "fas fa-desktop",
+    }, {
+      icon: "",
       title: "Microsoft Azure",
       content: "Familiar with Azure services, such as Face API",
+      style: "icon-info"
+    }, {
+      icon: "",
+      title: "Google Analytics",
+      content: "Experienced with Google Analytics",
+      style: "icon-info"
+    }, {
+      icon: "",
+      title: "Google Tag Manager",
+      content: "Basic knowledge about GTM",
+      style: "icon-info"
+    }, {
+      icon: "",
+      title: "Google Search Console",
+      content: "Experienced with Google Search Console",
       style: "icon-info"
     }]
 
@@ -357,7 +373,7 @@ export class IntroComponent implements OnInit {
       {
         icon: "",
         title: "VS Code",
-        content: "Proficient with the tool and very famillear in development with VSCode",
+        content: "Proficient with the tool & very famillear in development with VSCode",
         style: "icon-info"
       }, {
         icon: "",
@@ -382,26 +398,26 @@ export class IntroComponent implements OnInit {
       }, {
         icon: "fas fa-desktop",
         title: "Postman & SOAP UI",
-        content: "Deep knowledge and experience in Postman and experiences SOAP UI",
+        content: "Deep knowledge & experience in Postman & experiences SOAP UI",
         style: "icon-info"
       }]
 
     this.operatingSystems = [{
       icon: "",
       title: "MacOS",
-      content: "Sharp knowledge and experience in MacOS operating system.",
+      content: "Sharp knowledge & experience in MacOS operating system.",
       style: "icon-info"
     },
     {
       icon: "",
       title: "Linux",
-      content: "Experience with linux operating system and its command line.",
+      content: "Experience with linux operating system & its command line.",
       style: "icon-info"
     },
     {
       icon: "fas fa-desktop",
       title: "Windows",
-      content: "Sharp knowledge and experience in Windows operating system.",
+      content: "Sharp knowledge & experience in Windows operating system.",
       style: "icon-info"
     }]
 
@@ -495,7 +511,7 @@ export class IntroComponent implements OnInit {
         icon: "assets/img/apps/mobile/safebox.png",
         url: "",
         title: "SafeBox",
-        description: "SafeBox app is to store notes and password securely. App uses strong encription and store data only in the device. Google and Facebook sign in availble",
+        description: "The app is developed to store notes and password securely. App uses strong encription and store data only in the device. Google and Facebook sign in available",
         techonologies: "Android & Firebase",
         status: "Offline",
         category: "Mobile - Android",
@@ -530,9 +546,9 @@ export class IntroComponent implements OnInit {
         icon: "assets/img/apps/desktop/PMS.png",
         url: "",
         title: "PMS",
-        description: "PMS stands for Patient Management System. The system is specifically desinged for a medical doctor for personal use. PMS keeps patient data and generate graphical chart view of the illness status from current state and the begining",
+        description: "PMS stands for Patient Management System. The system is specifically desinged & developing for a medical doctor for personal use. PMS keeps patient data & generate graphical chart view of the illness status from current state & the begining",
         techonologies: "Angular 4",
-        status: "Running",
+        status: "Under Development",
         category: "Desktop",
         style: "icon-rose"
       }
@@ -542,12 +558,11 @@ export class IntroComponent implements OnInit {
 
     this.extraCurricular =
       [
-        'Technical coordinator at Ecurie ‘14 - Annual Science Day of W/Sri Sumangala College Kandy',
-        'School rugby player and member of school Rugby Football Association at W/Sri Sumangala College Kandy',
-        'Member of school athletic team',
+        'Technical coordinator at ‘Ecurie 14’ - Annual Science Day of W/Sri Sumangala College Kandy',
+        'School rugby player & member of school Rugby Football Association at W/Sri Sumangala College Kandy',
         'Member of Sri Lanka Federation of Youth Clubs',
         'Member of SLBBFF (Sri Lanka Bodybuilding & Fitness Federation)',
-        'Technical coordinator & Marketing leader at Zentire ‘16 - Annual Talent Show of National Institiute of Business Management Kandy'
+        'Technical coordinator & Marketing leader at ‘Zentire 16’ - Annual Talent Show of National Institiute of Business Management Kandy'
       ]
 
     this.interests =
@@ -562,6 +577,16 @@ export class IntroComponent implements OnInit {
   changeDownloadResume() {
     this.downloadResume = (this.flagDR) ? 'Yes' : 'Need to Download Resume'
     this.flagDR = !this.flagDR
+  }
+
+
+  copyToClickboard(params) {
+    document.addEventListener('copy', (e: ClipboardEvent) => {
+      e.clipboardData.setData('text/plain', (params));
+      e.preventDefault();
+      document.removeEventListener('copy', null);
+    });
+    document.execCommand('copy');
   }
 
 }
