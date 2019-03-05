@@ -12,7 +12,6 @@ export class PageComponent implements OnInit {
   width: number = 100;
   height: number = 100;
 
-
   constructor() { }
 
   ngOnInit() {

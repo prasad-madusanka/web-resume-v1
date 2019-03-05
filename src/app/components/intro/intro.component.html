@@ -5,7 +5,7 @@
     <div class="row vertical-container overflow">
 
       <div class="col-md-4 text-center">
-        <img src="{{src}}" class="face img-fluid" alt="Responsive image" draggable="false">
+        <img src="{{src}}" class="face img-fluid" alt="Profile picture" draggable="false">
       </div>
 
       <div class="col-md-8">
@@ -49,17 +49,17 @@
           <br>
           <b>Gender : </b>&nbsp;<span>{{gender}}</span>
           <br>
-          <b>Marital status : </b>&nbsp;<span>{{maritalStatus}}</span>
+          <b>Skills : </b>&nbsp;<span>{{skills}}</span>
           <br>
         </div>
         <div class="col-md-6">
-          <b>Freelance : </b>&nbsp;<span>{{freelance}}</span>
+          <b>Mobile : </b>&nbsp;<span>{{mobileNumber}}</span>
           <br>
-          <b>Skills : </b>&nbsp;<span>{{skills}}</span>
+          <b>NIC : </b>&nbsp;<span>{{nic}}</span>
           <br>
           <b>Address : </b>&nbsp; <span>{{homeAddress}}</span>
           <br>
-          <b>Mobile : </b>&nbsp;<span>{{mobileNumber}}</span>
+          <b>Marital status : </b>&nbsp;<span>{{maritalStatus}}</span>
           <br>
         </div>
       </div>
@@ -87,7 +87,7 @@
               <i class="fa fa-google"></i>
             </button>
           </a>
-<!-- 
+          <!-- 
           <a class="links" href="{{mail}}">
             <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="tooltip" data-placement="bottom"
               title="Click to send mail to 'hello@prasadmadusanka.me'">
@@ -146,6 +146,8 @@
       <p class="h6 topic-sub text-transform-none">Section includes developement environments, languages, frameworks,
         databases, servers, cloud services, tools & etc</p>
 
+        <br>
+        <br>
 
       <!-- Development Environments -->
       <div>
@@ -234,7 +236,7 @@
       <div>
         <h5 class="title text-center icon-info technical-header">
           <i class="material-icons mat-vert">dashboard</i>&nbsp;
-          <span>Frameworks</span>
+          <span>Frameworks & Libraries</span>
         </h5>
 
         <div class="com-e">
@@ -391,7 +393,7 @@
       </div>
 
       <!-- Packages -->
-      <div>
+      <!-- <div>
         <h5 class="title text-center icon-info technical-header">
           <i class="material-icons mat-vert">local_library</i>&nbsp;
           <span>Packages</span>
@@ -433,7 +435,7 @@
 
         </div>
 
-      </div>
+      </div> -->
 
 
       <!-- Tools & IDE's -->
@@ -571,7 +573,7 @@
                 <!-- If URL is NOT Empty -->
                 <a href="{{item.url}}" target="_blank" *ngIf="item.url?.length!=0">
 
-                  <div><img src="{{item.icon}}" alt=""></div>
+                  <div><img src="{{item.icon}}" alt="project icon" draggable="false"></div>
                   <h4 class="info-title">{{item.title}}</h4>
                   <p class="projects-description text-black-1">
                     {{item.description}}
@@ -591,7 +593,7 @@
                 <!-- If URL IS Empty -->
                 <a *ngIf="item.url?.length==0">
 
-                  <div><img src="{{item.icon}}" alt=""></div>
+                  <div><img src="{{item.icon}}" alt="project icon" draggable="false"></div>
                   <h4 class="info-title">{{item.title}}</h4>
                   <p class="projects-description text-black-1">
                     {{item.description}}
@@ -685,7 +687,7 @@
       </div>
       <div class="modal-body">
         <p class="h6 text-transform-none">This is a private repository and if you need access to view full repository,
-          please send me a email</p>
+          please send me an email</p>
         <br>
         <p class="h6 text-transform-none">Click on email to copy or open your mail client</p>
         <br>

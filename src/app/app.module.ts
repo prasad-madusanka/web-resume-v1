@@ -12,6 +12,7 @@ import { EducationTimelineComponent } from './components/education-timeline/educ
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { FooterComponent } from './components/footer/footer.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,

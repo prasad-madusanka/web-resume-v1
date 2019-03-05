@@ -8,10 +8,10 @@ import { environment } from 'src/environments/environment';
 })
 export class IntroComponent implements OnInit {
 
-  downloadResume: string = 'Need to Download Resume'
+  downloadResume: string = 'Download Resume'
   flagDR: boolean = true
 
-  src: string = 'assets/img/face/face.jpg'
+  src: string = 'assets/img/face/face1.jpg'
   resume: string = "assets/img/resume/Prasad's Resume.pdf"
 
   setn1: string = ''
@@ -21,7 +21,7 @@ export class IntroComponent implements OnInit {
 
   name: string = 'Prasad Madusanka'
   selfDescription1: string = 'I’m a Full Stack Developer with more than 1 year industrial experience and around 2 year experience in freelance development.'
-  selfDescription2: string = 'And I’m an undergraduate joiner with strong and well developed industrial skills and experience in Web development. Also i have freelance experience in Mobile apps & Standalone application development including design, delivering and maintenance.'
+  selfDescription2: string = 'And I’m an undergraduate joiner with strong and well developed industrial skills in Web development. Also i have freelance experience in Mobile apps & Standalone application development including design, delivering and maintenance.'
   nameWithInitials: string = 'W. H. M. Prasad Madusanka Wijepala'
   bornDate: string = '13'
   bornMonthAndYear: string = 'October 1995'
@@ -31,6 +31,7 @@ export class IntroComponent implements OnInit {
   mobileNumber: string = '(+94) 777 578 947'
   emailAddress: string = 'prasad.mads@gmail.com / prasad@prasadmadusanka.me'
   freelance: string = 'Available'
+  nic:string = '952873563V'
   skills: string = 'Web, Mobile & Microservice development'
 
   linkedin: string = 'https://www.linkedin.com/in/prasad-madusanka'
@@ -325,7 +326,7 @@ export class IntroComponent implements OnInit {
       },
       {
         icon: "fab fa-android",
-        title: "Android",
+        title: "Mobile",
         content: "Around 1 year experience in Android mobile application development & basic knowledge in cross platform application develoment with Nativescript.",
         style: "icon-info"
       },
@@ -575,7 +576,7 @@ export class IntroComponent implements OnInit {
   }
 
   changeDownloadResume() {
-    this.downloadResume = (this.flagDR) ? 'Yes' : 'Need to Download Resume'
+    this.downloadResume = (this.flagDR) ? 'Click' : 'Download Resume'
     this.flagDR = !this.flagDR
   }
 
