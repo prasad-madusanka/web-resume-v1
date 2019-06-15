@@ -3,7 +3,11 @@
 }
 
 .intro-content {
-    padding-top: 3rem;
+    //padding-top: 1rem;
+
+    h1 {
+        line-height: 36px !important;
+    }
 }
 
 .vertical-container {
@@ -90,6 +94,7 @@
 
 .links {
     padding: 0rem 1rem 0rem 1rem;
+
     .fa {
         font-size: 18px;
     }
@@ -97,29 +102,37 @@
 
 .technical-skills {
     display: block;
+
     .programming {
         padding-top: 0 !important;
         padding-bottom: 4rem;
     }
+
     .info {
         padding-top: 1rem;
     }
+
     .mat-vert {
         vertical-align: text-top;
     }
+
     .technical-header {
         padding-top: 2rem;
     }
+
     .icon-font-size {
         i {
             font-size: 46px;
         }
+
         margin-bottom: 0;
         margin-top: 0;
     }
+
     .java {
         padding-top: 20px;
     }
+
     .in-tle-top {
         margin-top: 6px;
     }
@@ -129,26 +142,33 @@
 
 .projects {
     display: block;
+
     .projects-header {
         font-weight: 600;
         font-size: 29px;
         color: #27b049;
     }
+
     .projects-sentence {
         line-height: 0;
     }
+
     img {
         border-radius: 50%;
         width: 5rem;
         border: 0px solid transparent;
-        box-shadow: 1px 6px 15px #00000d59;
+        //box-shadow: 1px 6px 15px #00000d59;
+        box-shadow: 1px 12px 15px #00000d59;
     }
+
     .technologies-used {
         margin-top: -6px;
     }
+
     .status {
         margin-top: -5px;
     }
+
     .text-black-1 {
         color: #27292bcf;
     }
@@ -156,17 +176,21 @@
 
 .extra-curricular {
     display: block;
+
     .extra-curricular-header {
         font-weight: 600;
         font-size: 29px;
         color: #27b049;
     }
+
     .extra-curricular-sentence {
         line-height: 0;
     }
+
     .list {
         padding-top: 1rem;
         padding-left: 2rem;
+
         li {
             font-size: 14px;
             font-weight: 400;
@@ -177,17 +201,21 @@
 
 .interests {
     display: block;
+
     .interests-header {
         font-weight: 600;
         font-size: 29px;
         color: #27b049;
     }
+
     .interests-sentence {
         line-height: 0;
     }
+
     .list {
         padding-top: 1rem;
         padding-left: 2rem;
+
         li {
             font-size: 14px;
             font-weight: 400;
@@ -257,6 +285,7 @@
         font-size: 15px;
         font-weight: 500;
     }
+
     span {
         font-weight: 500;
         font-size: 15px;
@@ -271,6 +300,7 @@
 
 .repo-access {
     padding: 0;
+
     span {
         color: black;
         font-weight: 500;
@@ -278,6 +308,10 @@
     }
 }
 
-.repo-fa{
+.repo-fa {
     vertical-align: middle;
+}
+
+.a-self-taught {
+    font-size: 26px;
 }

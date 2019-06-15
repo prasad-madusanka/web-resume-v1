@@ -31,14 +31,14 @@ export class IntroComponent implements OnInit {
   mobileNumber: string = '(+94) 777 578 947'
   emailAddress: string = 'prasad.mads@gmail.com / prasad@prasadmadusanka.me'
   freelance: string = 'Available'
-  nic:string = '952873563V'
+  nic: string = '952873563V'
   skills: string = 'Web, Mobile & Microservice development'
 
   linkedin: string = 'https://www.linkedin.com/in/prasad-madusanka'
   bitbucket: string = 'https://bitbucket.org/prasadMadusanka/'
   gmail: string = 'mailto:prasad.mads@gmail.com'
   repoAccessMail: string = 'prasad.mads@gmail.com'
-  mail: string = 'mailto:hello@prasadmadusanka.me'
+  mail: string = 'mailto:prasad@prasadmadusanka.me'
 
   industrial: any = []
   education: any = []
@@ -195,42 +195,42 @@ export class IntroComponent implements OnInit {
       {
         icon: "fa-node nodejs",
         title: "Node Js",
-        content: "Proficient in backend service development with Node Js & Express Js.",
+        content: "Proficient in backend service development with Node Js & Express Js",
         style: "icon-info"
       }, {
         icon: "java",
         title: "Java",
-        content: "Good knowledge in application & service development with Java programming language.",
+        content: "Good knowledge in application & service development with Java programming language",
         style: "icon-warning"
       }, {
         icon: "fa-js js",
         title: "Javascript & Typescript",
-        content: "Good Experience in web development with Javascript.",
+        content: "Good Experience in web development with Javascript",
         style: "icon-primary"
       }, {
         icon: "fa-html5 html ",
         title: "HTML",
-        content: "Proficient in web front end development with HTML5.",
+        content: "Proficient in web front end development with HTML5",
         style: "icon-success"
       }, {
         icon: "fa-sass scss",
         title: "Sass",
-        content: "Good experience in SCSS.",
+        content: "Good experience in SCSS",
         style: "icon-success"
       }, {
         icon: "fa-css3 css3",
         title: "CSS",
-        content: "Good experience in CSS3.",
+        content: "Good experience in CSS3",
         style: "icon-success"
       }, {
         icon: "fa-whmcs shell",
         title: "Shell & Batch Script",
-        content: "Good knowledge & experience in Shell scripting & Batch scripting.",
+        content: "Good knowledge & experience in Shell scripting & Batch scripting",
         style: "icon-rose"
       }, {
         icon: "",
         title: "C#",
-        content: "Experience in standalone application development with C#.",
+        content: "Experience in standalone application development with C#",
         style: "icon-success"
       }
     ]
@@ -239,17 +239,22 @@ export class IntroComponent implements OnInit {
       {
         icon: "fab fa-angular angular",
         title: "Angular",
-        content: "Proficient with Angular & sharp web development experience with Angular 4, 5, & 6 releases.",
+        content: "Proficient with Angular & sharp web development experience with Angular 4, 5, & 6 releases",
         style: "icon-info"
       }, {
         icon: "fab fa-react react",
         title: "React",
-        content: "Basic knowledge in web development with React framework.",
+        content: "Basic knowledge in Mobile & Web development with React framework",
         style: "icon-info"
       }, {
         icon: "fas fa-leaf",
         title: "Spring Boot",
-        content: "Good experience in Spring Boot Microservice development.",
+        content: "Good experience in Spring Boot Microservice development",
+        style: "icon-info"
+      }, {
+        icon: "fas fa-leaf",
+        title: "Hibernate",
+        content: "Good experience in Hibernate framework",
         style: "icon-info"
       }
     ]
@@ -258,19 +263,19 @@ export class IntroComponent implements OnInit {
       {
         icon: "fab fa-angular",
         title: "Mongo DB",
-        content: "Sharp & good experience in MongoDB.",
+        content: "Sharp & good experience in MongoDB",
         style: "icon-info"
       },
       {
         icon: "fab fa-angular",
         title: "Orient DB",
-        content: "Familiar with Orient DB.",
+        content: "Familiar with Orient DB",
         style: "icon-info"
       },
       {
         icon: "fab fa-angular",
         title: "SQL",
-        content: "Have good experience with SQL databases.",
+        content: "Have good experience with SQL databases",
         style: "icon-info"
       }
     ]
@@ -279,7 +284,7 @@ export class IntroComponent implements OnInit {
       {
         icon: "fab fa-angular",
         title: "Apache Tomcat",
-        content: "Good experience in Apache Tomcat server.",
+        content: "Good experience in Apache Tomcat server",
         style: "icon-info"
       },
       {
@@ -341,12 +346,12 @@ export class IntroComponent implements OnInit {
     this.cservices = [{
       icon: "",
       title: "AWS",
-      content: "Good experience in AWS services.",
+      content: "Good experience in AWS services",
       style: "icon-info"
     }, {
       icon: "",
       title: "Google Cloud Platform",
-      content: "Sharp kowledge & experience in Google Cloud Platform.",
+      content: "Sharp kowledge & experience in Google Cloud Platform",
       style: "icon-info"
     }, {
       icon: "",
@@ -406,19 +411,19 @@ export class IntroComponent implements OnInit {
     this.operatingSystems = [{
       icon: "",
       title: "MacOS",
-      content: "Sharp knowledge & experience in MacOS operating system.",
+      content: "Sharp knowledge & experience in MacOS operating system",
       style: "icon-info"
     },
     {
       icon: "",
       title: "Linux",
-      content: "Experience with linux operating system & its command line.",
+      content: "Experience with linux operating system & its command line",
       style: "icon-info"
     },
     {
       icon: "fas fa-desktop",
       title: "Windows",
-      content: "Sharp knowledge & experience in Windows operating system.",
+      content: "Sharp knowledge & experience in Windows operating system",
       style: "icon-info"
     }]
 
@@ -472,7 +477,28 @@ export class IntroComponent implements OnInit {
         status: "Under Development",
         category: "Web",
         style: "icon-primary"
-      }, {
+      },
+      {
+        icon: "assets/img/apps/mobile/train_schedules.png",
+        url: "https://play.google.com/store/apps/details?id=me.prasadmadusanka.mobile.travel.trainschedules",
+        title: "Train Schedules",
+        description: "This mobile app provide Sri Lankan Railway time schedules & several extra features",
+        techonologies: "React Native",
+        status: "Online",
+        category: "Mobile - Android & iOS",
+        style: "icon-info"
+      },
+      {
+        icon: "assets/img/apps/mobile/cp_tourism.png",
+        url: "https://play.google.com/store/apps/details?id=com.cptourism",
+        title: "CP Tourism",
+        description: "CP Tourism is a tourist information mobile application developed for Trade Commerce and Tourism Department & Regional Economic Developmnt Agency",
+        techonologies: "React Native & AWS",
+        status: "Online",
+        category: "Mobile - Android & iOS",
+        style: "icon-info"
+      },
+      {
         icon: "assets/img/apps/mobile/tick.png",
         url: "",
         title: "TICK",

@@ -13,8 +13,12 @@
         <div class="intro-content">
           <h2 class="title no-margin">Hello</h2>
           <h2 class="title no-margin name">I Am {{name}}</h2>
-          <h1 class="title no-margin typewriter"><span
-              class="text-green">{{setn1}}</span>&nbsp;<span>{{setn2}}</span>{{blink}}</h1>
+          <h1 class="title no-margin typewriter">
+            <span class="a-self-taught">A self-taught</span> <br>
+            <span style="line-height: 45px">
+              <span class="text-green">{{setn1}}</span>&nbsp;<span>{{setn2}}</span>{{blink}}
+            </span>
+          </h1>
           <p class="h6 text-transform-none about-me">{{selfDescription1}}<br>{{selfDescription2}} </p>
           <br>
 
@@ -76,7 +80,7 @@
           <a class="links">
             <!-- href="{{bitbucket}}" target="_blank" -->
             <button class="btn btn-primary btn-fab btn-fab-mini btn-round" data-toggle="modal" data-placement="bottom"
-              title="Note: This is a private repository" data-target="#modalBitbucket">
+              data-target="#modalBitbucket">
               <i class="fa fa-bitbucket"></i>
             </button>
           </a>
@@ -146,8 +150,8 @@
       <p class="h6 topic-sub text-transform-none">Section includes developement environments, languages, frameworks,
         databases, servers, cloud services, tools & etc</p>
 
-        <br>
-        <br>
+      <br>
+      <br>
 
       <!-- Development Environments -->
       <div>
@@ -191,7 +195,7 @@
 
         <h5 class="title text-center icon-info">
           <i class="material-icons mat-vert">code</i>&nbsp;
-          <span>Scripting</span>
+          <span>Languages & Other</span>
         </h5>
 
         <div class="com-e">
@@ -249,13 +253,14 @@
 
                 <div class="info info-horizontal">
 
-                  <h4 class="info-title in-tle-top text-center" *ngIf="item.title=='Spring Boot'">
+                  <h4 class="info-title in-tle-top text-center"
+                    *ngIf="item.title=='Spring Boot' || item.title=='Hibernate'">
                     {{item.title}}</h4>
-                  <p class="description-text" *ngIf="item.title=='Spring Boot'">
+                  <p class="description-text" *ngIf="item.title=='Spring Boot' || item.title=='Hibernate'">
                     {{item.content}}
                   </p>
 
-                  <div class="description" *ngIf="item.title!='Spring Boot'">
+                  <div class="description" *ngIf="item.title!='Spring Boot' && item.title!='Hibernate'">
                     <h4 class="text-center icon-font-size">
                       <i class="fab" [ngClass]="item.icon"></i>
                     </h4>
